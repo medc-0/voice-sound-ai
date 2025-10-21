@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Voice Sound AI — Offline TTS</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Voice Sound AI</h1>
+        <p class="muted">
+          Offline TTS • English / Deutsch • Select system voices or upload
+          custom models
+        </p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <div class="col">
+            <label for="text">Enter text</label>
+            <textarea id="text" rows="6">
+Hello, this is an offline TTS demo.</textarea
+            >
+          </div>
+          <div class="col-sm">
+            <label for="language">Language</label>
+            <select id="language">
+              <option value="en">English</option>
+              <option value="de">German</option>
+            </select>
+
+            <label for="gender">Gender</label>
+            <select id="gender">
+              <option value="">Auto</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+
+            <label for="voices">Choose voice (system)</label>
+            <select id="voices">
+              <option>Loading...</option>
+            </select>
+
+            <div class="actions">
+              <button id="speak" class="btn primary">Speak</button>
+              <button id="preview" class="btn">Preview Voice</button>
+            </div>
+            <div id="status" class="status muted"></div>
+          </div>
+        </div>
+
+        <div id="player" class="player"></div>
+      </section>
+
+      <footer class="footer muted">
+        Local-only — audio files stored in <code>/audio</code>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VSCode
+.vscode/
+
+# audio and training artifacts
+/audio/
+/trainings/
+
+# OS
+Thumbs.db
+desktop.ini

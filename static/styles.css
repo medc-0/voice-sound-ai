@@ -1,0 +1,113 @@
+:root {
+  --bg: #0f1720;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #6ee7b7;
+  --accent-2: #60a5fa;
+  --text: #e6eef6;
+  --glass: rgba(255, 255, 255, 0.03);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, system-ui, Arial;
+  background: linear-gradient(180deg, #071026 0%, #081425 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+.container {
+  max-width: 1000px;
+  margin: 36px auto;
+  padding: 20px;
+}
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+.muted {
+  color: var(--muted);
+}
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 14px;
+  box-shadow: 0 6px 24px rgba(2, 6, 23, 0.6);
+}
+.row {
+  display: flex;
+  gap: 18px;
+}
+.col {
+  flex: 1;
+}
+.col-sm {
+  width: 320px;
+}
+label {
+  display: block;
+  margin: 10px 0 6px;
+  font-size: 13px;
+}
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: var(--glass);
+  color: var(--text);
+  resize: vertical;
+}
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: transparent;
+  color: var(--text);
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #04233a;
+}
+.status {
+  margin-top: 12px;
+  font-size: 13px;
+}
+.player {
+  margin-top: 16px;
+}
+.footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 780px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-sm {
+    width: 100%;
+  }
+}
