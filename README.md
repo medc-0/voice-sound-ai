@@ -1,4 +1,4 @@
-## TTS FastAPI Offline
+# TTS FastAPI Offline
 
 This project provides a simple offline text-to-speech (TTS) web UI and API using pyttsx3.
 
