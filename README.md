@@ -1,4 +1,4 @@
-Offline TTS FastAPI
+TTS FastAPI Offline
 
 This project provides a simple offline text-to-speech (TTS) web UI and API using pyttsx3.
 
@@ -58,25 +58,3 @@ This server and the TTS engine run locally. No audio or text is sent to third-pa
 
 - The web UI is redesigned to be responsive and modern. It lists available system voices and allows you to select a specific `voice_id` or use automatic language/gender heuristics.
 - Use the "Preview Voice" button to generate a short sample of the selected voice before synthesizing longer text.
-
-## Git / GitHub integration
-
-I added a small helper script to configure and push this repository to GitHub using the commands you provided.
-
-- `.gitignore` excludes virtual environments, cached files, and generated audio/training folders.
-- `scripts/push_to_github.ps1` will run the commands below and attempt to push to the remote.
-
-Example (PowerShell) — the script runs these commands internally:
-
-```powershell
-git branch -M main
-git remote add origin https://github.com/medc-0/voice-sound-ai.git
-git push -u origin main
-```
-
-Note: You must have permission to push to that repository. If authentication fails, configure Git credentials (Personal Access Token or SSH key) in your environment.
-
-## Next steps and advanced integrations
-
-- Integrate a neural TTS inference script (Coqui TTS trained model) to synthesize higher-quality audio and place output in the `audio/` folder used by this app.
-- Add an authentication layer if you plan to expose the app beyond a local network.

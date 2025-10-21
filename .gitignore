@@ -8,7 +8,7 @@ __pycache__/
 # VSCode
 .vscode/
 
-# audio and training artifacts
+# audio and training
 /audio/
 /trainings/
 
